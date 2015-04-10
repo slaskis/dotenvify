@@ -1,8 +1,10 @@
-# envify  [![Build Status](https://secure.travis-ci.org/hughsk/envify.png?branch=master)](http://travis-ci.org/hughsk/envify) [![stable](http://hughsk.github.io/stability-badges/dist/stable.svg)](http://github.com/hughsk/stability-badges) #
+# dotenvify  [![Build Status](https://secure.travis-ci.org/slaskis/dotenvify.png?branch=master)](http://travis-ci.org/slaskis/dotenvify)
 
 Selectively replace Node-style environment variables with plain strings.
 Available as a standalone CLI tool and a
 [Browserify](http://browserify.org) v2 transform.
+
+**This is a fork of [envify](http://github.com/hughsk/envify) which autoloads a project .env file.**
 
 Works best in combination with [uglifyify](http://github.com/hughsk/uglifyify).
 
@@ -17,7 +19,7 @@ npm install envify browserify
 Or, for the CLI:
 
 ``` bash
-sudo npm install -g envify
+sudo npm install -g dotenvify
 ```
 
 ## Usage ##

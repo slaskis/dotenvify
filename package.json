@@ -7,7 +7,7 @@
     "test": "node test.js | tap-spec"
   },
   "bin": {
-    "envify": "bin/envify"
+    "dotenvify": "bin/dotenvify"
   },
   "repository": {
     "type": "git",
