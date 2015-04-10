@@ -1,6 +1,6 @@
 {
-  "name": "envify",
-  "version": "3.4.0",
+  "name": "dotenvify",
+  "version": "1.0.0",
   "description": "Selectively replace Node-style environment variables with plain strings.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hughsk/envify.git"
+    "url": "git://github.com/slaskis/dotenvify.git"
   },
   "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughskennedy.com/)",
   "license": "MIT",
@@ -20,8 +20,9 @@
     "tape": "~2.3.2"
   },
   "dependencies": {
-    "through": "~2.3.4",
-    "jstransform": "^10.0.1"
+    "dotenv": "^1.1.0",
+    "jstransform": "^10.0.1",
+    "through": "~2.3.4"
   },
   "keywords": [
     "environment",

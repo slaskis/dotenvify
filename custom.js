@@ -1,13 +1,16 @@
-var through = require('through')
+var dotenv = require('dotenv')
+  , through = require('through')
   , jstransform = require('jstransform')
   , createVisitors = require('./visitors')
 
 var processEnvPattern = /\bprocess\.env\b/
 
+dotenv.load();
+
 module.exports = function(rootEnv) {
   rootEnv = rootEnv || process.env || {}
 
-  return function envify(file, argv) {
+  return function dotenvify(file, argv) {
     if (/\.json$/.test(file)) return through()
 
     var buffer = []
