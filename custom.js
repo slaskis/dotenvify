@@ -2,15 +2,23 @@ var dotenv = require('dotenv')
   , through = require('through')
   , jstransform = require('jstransform')
   , createVisitors = require('./visitors')
+  , deepEqual = require('deep-equal')
 
 var processEnvPattern = /\bprocess\.env\b/
 
-dotenv.load();
+var _options, _result
+function loadEnv (argv) {
+  var options = {silent: argv.silent, path: argv.path, encoding: argv.encoding}
+  if (_result === true && deepEqual(options, _options)) return
+  _result = dotenv.load(argv)
+  _options = options
+}
 
 module.exports = function(rootEnv) {
   rootEnv = rootEnv || process.env || {}
 
   return function dotenvify(file, argv) {
+    loadEnv(argv)
     if (/\.json$/.test(file)) return through()
 
     var buffer = []
