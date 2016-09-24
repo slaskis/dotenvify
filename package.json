@@ -20,6 +20,7 @@
     "tape": "~2.3.2"
   },
   "dependencies": {
+    "deep-equal": "^1.0.1",
     "dotenv": "^1.1.0",
     "jstransform": "^10.0.1",
     "through": "~2.3.4"
